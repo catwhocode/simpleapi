@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>.</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+.gede {
+    font-size:30px;
+}
+
+.lebihgede {
+    font-size:40px;
+}
+</style>
+</head>
+<body>
+<div id="informasi" class="lebihgede">...</div>
+
+<input class="gede" type="button" onclick="tampilkanIntro()" value="Tampilkan Intro"> | 
+<input class="gede" type="button" onclick="tampilkanNamaNegara()" value="Tampilkan Nama Negara">
+
+<script src="node_modules/axios/dist/axios.js"></script>
+
+<script>
+function tampilkanIntro() {
+    axios.defaults.baseURL = 'http://bralinktech.com/simpleapi';
+    const hasil = axios.get('/')
+      .then(function (response) {
+        // taroh kode dibawah ini kalau ga ada error
+        console.log(response);
+        document.getElementById('informasi').innerHTML = response.data;
+      })
+      .catch(function (error) {
+        // kode dibawah ini akan dieksekusi kalau ada error
+        console.log(error);
+      })
+      .then(function () {
+        // apapun hasilnya, mo error mo kaga, kode dibawah ini akan selalu dieksekusi
+    });    
+}
+
+
+function tampilkanNamaNegara() {
+    axios.defaults.baseURL = 'http://bralinktech.com/simpleapi';
+    const hasil = axios.get('/negara')
+      .then(function (response) {
+        // taroh kode dibawah ini kalau ga ada error
+        console.log(response);
+        document.getElementById('informasi').innerHTML = response.data;
+      })
+      .catch(function (error) {
+        // kode dibawah ini akan dieksekusi kalau ada error
+        console.log(error);
+      })
+      .then(function () {
+        // apapun hasilnya, mo error mo kaga, kode dibawah ini akan selalu dieksekusi
+    });    
+}
+
+</script>
+
+</body>
+</html>
