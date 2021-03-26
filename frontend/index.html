@@ -23,7 +23,7 @@
 
 <script>
 function tampilkanIntro() {
-    axios.defaults.baseURL = 'http://bralinktech.com/simpleapi';
+    axios.defaults.baseURL = 'http://localhost/simpleapi';
     const hasil = axios.get('/')
       .then(function (response) {
         // taroh kode dibawah ini kalau ga ada error
