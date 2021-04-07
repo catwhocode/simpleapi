@@ -1,2 +1,8 @@
 Demo Simple API Menggunakan PHP
 ===============================
+
+Repo ini terdiri dari 2 bagian:
+- Backend
+- Frontend
+
+Bagian backend berisi script PHP menggunakan Bramus Router. Bagian Frontend menggunakan Axios untuk mengakses backend.
