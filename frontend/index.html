@@ -41,7 +41,7 @@ function tampilkanIntro() {
 
 
 function tampilkanNamaNegara() {
-    axios.defaults.baseURL = 'http://bralinktech.com/simpleapi';
+    axios.defaults.baseURL = 'http://localhost/simpleapi';
     const hasil = axios.get('/negara')
       .then(function (response) {
         // taroh kode dibawah ini kalau ga ada error
